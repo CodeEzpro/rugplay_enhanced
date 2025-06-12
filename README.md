@@ -23,6 +23,12 @@ As said, ~~I~~ *(Cloudflare)* hosts a database which is just a big list of banne
 > [!CAUTION]
 > The server has a maximum of 100,000 requests per day. If someone tries to reach the limit or adds garbage to the list, I will simply add a whitelist and rate-limit the server.
 
+## Instalation
+1. Turn on developer mode on your browser
+2. Download the wanted version from release menu
+3. Unpack the ZIP file
+4. with the button, load unpacked extension
+
 ## Roadmap
 - [ ] Add authentification with rugplay user token
 - [ ] Custom user profile banner
@@ -31,3 +37,4 @@ As said, ~~I~~ *(Cloudflare)* hosts a database which is just a big list of banne
 You are free to contribute to the project.
 ## Contact 
 In case you want to contact me : `codeezpro`
+
