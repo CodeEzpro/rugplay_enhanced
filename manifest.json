@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Rugplay Amélioré",
+    "version": "1.6.0",
+    "description": "Améliore l'expérience globale sur rugplay.com ; Anti-pub, Anti-Nom gênants, Anti-Spamers et décoration live trades pour *TCZ et *KNT",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "https://rugplaytcz.ianjones2127.workers.dev/*"
+    ],
+    "icons": {
+        "1024": "logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://rugplay.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "lang.json"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "logo.png"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self';"
+}

@@ -1,0 +1,172 @@
+{
+  "fr": {
+    "popup": {
+      "title": "Rugplay Enhanced",
+      "updateButton": "Mettre a jour la liste",
+      "addElementPlaceholder": "Entrez un utilisateur ou mot à bannir",
+      "addElementButton": "Ajouter à la liste",
+      "confirmAdd": "Voulez-vous vraiment ajouter cet élément ?",
+      "typeUser": "user",
+      "typeWord": "word",
+      "errorEmptyInput": "Le champ ne peut pas être vide.",
+      "errorInvalidType": "Le type doit être 'user' ou 'word'.",
+      "addSuccess": "Élément ajouté avec succès.",
+      "addFailure": "Échec de l'ajout de l'élément.",
+      "disableExtension": "Désactiver l'extension",
+      "enableExtension": "Activer l'extension",
+      "lastSync": "Dernière synchronisation"
+    },
+    "background": {
+      "extensionInstalled": "Extension installée !",
+      "wordsListSaved": "✅ Words Liste enregistrée !",
+      "httpError": "Erreur HTTP: ",
+      "error": "Erreur : "
+    },
+    "content": {
+      "usernameTooLong": "Nom d'utilisateur trop long",
+      "userBanned": "Utilisateur banni",
+      "bannedWords": "Mot(s) bannis",
+      "consoleStarting": "Starting...",
+      "consoleStarted": "Started",
+      "consoleTest": "test",
+      "consoleAddedDirect": "[👀] Ajout direct détecté :",
+      "consoleObservationActivated": "✅ Observation activée sur :"
+    }
+  },
+  "en": {
+    "popup": {
+      "title": "Rugplay Enhanced",
+      "updateButton": "Update List",
+      "addElementPlaceholder": "Enter a user or word to ban",
+      "addElementButton": "Add to List",
+      "confirmAdd": "Do you really want to add this item?",
+      "typeUser": "user",
+      "typeWord": "word",
+      "errorEmptyInput": "Field cannot be empty.",
+      "errorInvalidType": "Type must be 'user' or 'word'.",
+      "addSuccess": "Item added successfully.",
+      "addFailure": "Failed to add item.",
+      "disableExtension": "Disable Extension",
+      "enableExtension": "Enable Extension",
+      "lastSync": "Last synchronization"
+    },
+    "background": {
+      "extensionInstalled": "Extension installed!",
+      "wordsListSaved": "✅ Words list saved!",
+      "httpError": "HTTP Error: ",
+      "error": "Error: "
+    },
+    "content": {
+      "usernameTooLong": "Username too long",
+      "userBanned": "User banned",
+      "bannedWords": "Banned word(s)",
+      "consoleStarting": "Starting...",
+      "consoleStarted": "Started",
+      "consoleTest": "test",
+      "consoleAddedDirect": "[👀] Direct addition detected:",
+      "consoleObservationActivated": "✅ Observation activated on:"
+    }
+  },
+  "pt-BR": {
+    "popup": {
+      "title": "Rugplay Enhanced",
+      "updateButton": "Atualizar lista",
+      "addElementPlaceholder": "Digite um usuário ou palavra para banir",
+      "addElementButton": "Adicionar à lista",
+      "confirmAdd": "Você realmente quer adicionar este item?",
+      "typeUser": "usuário",
+      "typeWord": "palavra",
+      "errorEmptyInput": "O campo não pode estar vazio.",
+      "errorInvalidType": "O tipo deve ser 'usuário' ou 'palavra'.",
+      "addSuccess": "Item adicionado com sucesso.",
+      "addFailure": "Falha ao adicionar o item.",
+      "disableExtension": "Desativar extensão",
+      "enableExtension": "Ativar extensão",
+      "lastSync": "Última sincronização"
+    },
+    "background": {
+      "extensionInstalled": "Extensão instalada!",
+      "wordsListSaved": "✅ Lista de palavras salva!",
+      "httpError": "Erro HTTP: ",
+      "error": "Erro: "
+    },
+    "content": {
+      "usernameTooLong": "Nome de usuário muito longo",
+      "userBanned": "Usuário banido",
+      "bannedWords": "Palavra(s) banida(s)",
+      "consoleStarting": "Iniciando...",
+      "consoleStarted": "Iniciado",
+      "consoleTest": "teste",
+      "consoleAddedDirect": "[👀] Adição direta detectada:",
+      "consoleObservationActivated": "✅ Observação ativada em:"
+    }
+  },
+  "ja": {
+    "popup": {
+      "title": "ラグプレイ・エンハンスト",
+      "updateButton": "リストを更新",
+      "addElementPlaceholder": "禁止するユーザーまたは単語を入力してください",
+      "addElementButton": "リストに追加",
+      "confirmAdd": "本当にこの項目を追加しますか？",
+      "typeUser": "ユーザー",
+      "typeWord": "単語",
+      "errorEmptyInput": "フィールドは空にできません。",
+      "errorInvalidType": "タイプは「ユーザー」または「単語」でなければなりません。",
+      "addSuccess": "項目が正常に追加されました。",
+      "addFailure": "項目の追加に失敗しました。",
+      "disableExtension": "拡張機能を無効にする",
+      "enableExtension": "拡張機能を有効にする",
+      "lastSync": "最終同期"
+    },
+    "background": {
+      "extensionInstalled": "拡張機能がインストールされました！",
+      "wordsListSaved": "✅ 単語リストが保存されました！",
+      "httpError": "HTTPエラー: ",
+      "error": "エラー: "
+    },
+    "content": {
+      "usernameTooLong": "ユーザー名が長すぎます",
+      "userBanned": "ユーザーが禁止されています",
+      "bannedWords": "禁止ワード",
+      "consoleStarting": "開始中...",
+      "consoleStarted": "開始しました",
+      "consoleTest": "テスト",
+      "consoleAddedDirect": "[👀] 直接追加が検出されました：",
+      "consoleObservationActivated": "✅ 観察が有効になりました："
+    }
+  },
+  "ja-Kana": {
+    "popup": {
+      "title": "ラグプレイ・エンハンスト",
+      "updateButton": "リストをこうしん",
+      "addElementPlaceholder": "きんしするユーザーまたはたんごをにゅうりょくしてください",
+      "addElementButton": "リストに追加",
+      "confirmAdd": "ほんとうにこのこうもくをついかしますか？",
+      "typeUser": "ユーザー",
+      "typeWord": "たんご",
+      "errorEmptyInput": "フィールドはからにできません。",
+      "errorInvalidType": "タイプは「ユーザー」または「たんご」でなければなりません。",
+      "addSuccess": "こうもくがせいこうについかされました。",
+      "addFailure": "こうもくのついかにしっぱいしました。",
+      "disableExtension": "かくちょうきのうをむこうにする",
+      "enableExtension": "かくちょうきのうをゆうこうにする",
+      "lastSync": "さいしゅうどうき"
+    },
+    "background": {
+      "extensionInstalled": "かくちょうきのうがインストールされました！",
+      "wordsListSaved": "✅ たんごリストがほぞんされました！",
+      "httpError": "HTTPエラー: ",
+      "error": "エラー: "
+    },
+    "content": {
+      "usernameTooLong": "ユーザーめいがながすぎます",
+      "userBanned": "ユーザーがきんしされています",
+      "bannedWords": "きんしワード",
+      "consoleStarting": "かいしちゅう...",
+      "consoleStarted": "かいししました",
+      "consoleTest": "テスト",
+      "consoleAddedDirect": "[👀] ちょくせつついかがけんしゅつされました：",
+      "consoleObservationActivated": "✅ かんさつがゆうこうになりました："
+    }
+  }
+}
