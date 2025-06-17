@@ -29,12 +29,12 @@ As said, ~~I~~ *(Cloudflare)* hosts a database which is just a big list of banne
 2. Turn on developer mode on your browser
 3. Download the wanted version from release menu
 4. Unpack the ZIP file
-5. with the button, load unpacked extension
+5. with the button, load unpacked extension  
 Done !
 
 ### From .CRX File
 1. Download the .crx file in the release section
-2. Get in your file explorer and open the file with your browser
+2. Get in your file explorer and open the file with your browser  
 Done !
 
 
@@ -45,5 +45,5 @@ Done !
 
 You are free to contribute to the project.
 ## Contact 
-In case you want to contact me : `codeezpro`
+In case you want to contact me : `codeezpro` on discord (most active social)
 
