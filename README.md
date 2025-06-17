@@ -24,10 +24,19 @@ As said, ~~I~~ *(Cloudflare)* hosts a database which is just a big list of banne
 > The server has a maximum of 100,000 requests per day. If someone tries to reach the limit or adds garbage to the list, I will simply add a whitelist and rate-limit the server.
 
 ## Instalation
-1. Turn on developer mode on your browser
-2. Download the wanted version from release menu
-3. Unpack the ZIP file
-4. with the button, load unpacked extension
+### From source code
+1. Download the source code
+2. Turn on developer mode on your browser
+3. Download the wanted version from release menu
+4. Unpack the ZIP file
+5. with the button, load unpacked extension
+Done !
+
+### From .CRX File
+1. Download the .crx file in the release section
+2. Get in your file explorer and open the file with your browser
+Done !
+
 
 ## Roadmap
 - [ ] Add authentification with rugplay user token
