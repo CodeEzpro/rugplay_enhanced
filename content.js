@@ -24,17 +24,17 @@ async function loadLanguage() {
     return langData[selectedLanguage]?.content || langData['fr'].content;
 }
 
+const goats = {
+    "*TCZ" : ["linear-gradient(to right, #c2410c, #f97316, #fdba74)","rgb(255, 215, 164)"],
+    "*KNT" : ["linear-gradient(to left,rgb(6, 151, 167),rgb(0, 187, 255))","linear-gradient(to left,#91d9fb,#caeffd)"],
+};
+
 (async () => {
     const enabled = await isExtensionEnabled();
     if (!enabled) {
         console.log("Extension is disabled, content.js will not execute.");
         return;
     }
-
-    const goats = {
-        "*TCZ" : ["linear-gradient(to right, #c2410c, #f97316, #fdba74)","rgb(255, 215, 164)"],
-        "*KNT" : ["linear-gradient(to left,rgb(6, 151, 167),rgb(0, 187, 255))","linear-gradient(to left,#91d9fb,#caeffd)"],
-    };
 
     function createTooltip(element, text) {
         const tooltip = document.createElement("div");
@@ -91,11 +91,6 @@ async function loadLanguage() {
                 msgContent.style.color = '#840102'
             }
         });
-    }
-
-    function WatchLivesTrades() {
-        let trade = document.getElementsByClassName('space-y-1 px-2 py-1')[0]
-        console.log("test")
     }
 
     async function main() {
@@ -173,11 +168,6 @@ async function loadLanguage() {
     });
 })();
 
-const goats = {
-    "*TCZ" : ["linear-gradient(to right, #c2410c, #f97316, #fdba74)","rgb(255, 215, 164)"],
-    "*KNT" : ["linear-gradient(to left,rgb(6, 151, 167),rgb(0, 187, 255))","linear-gradient(to left,#91d9fb,#caeffd)"],
-};
-
 function createTooltip(element, text) {
     const tooltip = document.createElement("div");
     tooltip.textContent = text;
@@ -206,6 +196,36 @@ function createTooltip(element, text) {
     });
 }
 
+function createDropdownMenu(parentElement) {
+    if (!parentElement) return;
+
+    const rect = parentElement.getBoundingClientRect();
+    const menu = document.createElement('div');
+
+    Object.assign(menu.style, {
+        position: 'absolute',
+        top: `${rect.bottom + window.scrollY}px`,
+        left: `${rect.left + window.scrollX}px`,
+        background: '#fff',
+        border: '1px solid #ccc',
+        padding: '8px',
+        borderRadius: '4px',
+        boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+        zIndex: 1000
+    });
+
+    const btn = document.createElement('button');
+    btn.textContent = 'Afficher le parent';
+    btn.onclick = () => console.log('Parent:', parentElement);
+
+    menu.appendChild(btn);
+    document.body.appendChild(menu);
+}
+
+function rlog() {
+    console.log("pressed")
+}
+
 async function limitText() {
     const lang = await loadLanguage();
     Array.from(document.getElementsByClassName('border-border border-b pb-4 last:border-b-0')).forEach(message => {
@@ -232,22 +252,60 @@ async function limitText() {
             msgContent.textContent = lang.bannedWords;
             msgContent.style.color = '#840102'
         }
+
+        
+        const menuBtn = document.createElement('button');
+        menuBtn.setAttribute('data-slot', 'button');
+        menuBtn.setAttribute('type', 'button');
+        menuBtn.className = `focus-visible:border-ring focus-visible:ring-ring/50 
+            aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 
+            aria-invalid:border-destructive shrink-0 justify-center whitespace-nowrap 
+            text-sm font-medium outline-none transition-all focus-visible:ring-[3px] 
+            disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none 
+            aria-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 
+            [&_svg]:pointer-events-none [&_svg]:shrink-0 cursor-pointer 
+            hover:bg-accent dark:hover:bg-accent/50 rounded-md 
+            has-[>svg]:px-2.5 flex h-auto items-center gap-1 
+            p-2 text-muted-foreground hover:text-foreground`.replace(/\s+/g, ' ');
+        menuBtn.textContent = '···';
+        menuBtn.onclick = () => createDropdownMenu(message);
+        message.children[0].children[2].append(menuBtn)
+
     });
 }
 
-function WatchLivesTrades() {
-    let trade = document.getElementsByClassName('space-y-1 px-2 py-1')[0]
-    console.log("test")
+function styliser() {
+    document.documentElement.style.setProperty('--muted-foreground', '#fff');
+    document.getElementsByClassName("text-base font-semibold")[0]?.insertAdjacentHTML("beforeend", "<span style='font-size: 8px;'>Enhanced</span>");
+    // document.querySelector('[data-sidebar="sidebar-menu-item"]').classList.add('border')
+
+    document.querySelectorAll('[data-sidebar="menu-item"]').forEach(val => {
+        val.children[0].classList.add('hv-border');
+    })
 }
 
 async function main() {
     const lang = await loadLanguage();
     console.log(lang.consoleStarting);
+    chrome.runtime.sendMessage({type: "getGradient"}, (response) => {
+        if (response && response.type === "setGradient") {
+            window.postMessage({type: "setGradient", payload: response.payload}, "*");
+        }
+    });
     await limitText();
+    styliser();
     console.log(lang.consoleStarted);
 }
 
-window.addEventListener('load', main);
+isExtensionEnabled().then(result => {
+    if (result) {
+
+        const script = document.createElement("script");
+        script.src = chrome.runtime.getURL("injected.js");
+        (document.head || document.documentElement).appendChild(script);
+        window.addEventListener('load', main);
+    }
+})
 
 function waitForElement(selector, callback) {
     const target = document.querySelector(selector);
@@ -267,18 +325,18 @@ function waitForElement(selector, callback) {
     tempObserver.observe(document.body, { childList: true, subtree: false });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+
 waitForElement('div[data-slot="card-content"].px-6.space-y-4', (target) => {
     const observer = new MutationObserver((mutations) => {
         for (const mutation of mutations) {
             mutation.addedNodes.forEach(node => {
-                console.log("[👀] Ajout direct détecté :", node);
                 limitText()
             });
         }
     });
 
     observer.observe(target, { childList: true, subtree: false });
-    console.log("✅ Observation activée sur :", target);
 });
 
 waitForElement('div.space-y-1.px-2.py-1', (target) => {
@@ -313,3 +371,27 @@ waitForElement('div.space-y-1.px-2.py-1', (target) => {
     observer.observe(target, { childList: true, subtree: false });
     console.log("✅ Observation activée sur :", target);
 });
+
+});
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.type === "setGradient") {
+        window.postMessage({type: "setGradient", payload: message}, "*");
+    }
+});
+
+window.addEventListener("message", async(event) => {
+    let msg = event.data.payload;
+    if (event.source !== window) return;
+    if (event.data.type === "loadLanguage") {
+        const url = chrome.runtime.getURL('lang.json');
+        const response = await fetch(url);
+        const langData = await response.json();
+        const { selectedLanguage = 'fr' } = await new Promise(resolve => {
+            chrome.storage.local.get(['selectedLanguage'], resolve);
+        });
+        window.postMessage({ type: "loadLanguageReturn",currentLang: selectedLanguage, payload: langData[selectedLanguage] }, "*"); 
+    } 
+});
+
+// ==============================================================
