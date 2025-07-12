@@ -11,12 +11,13 @@ It's available in:
 - Japanese  
 - Kana Japanese  
 
-The extension is a mix of things related to comments. It was made while usernames were not truncated.  
+The extension is a mix of things related to comments. It was made while usernames were not truncated (and webpage were infinitly long).  
 
 It:  
 - Truncates usernames that have more than 15 chars  
 - Blocks usernames and words in a community-based blacklist  
-- Has Easter egg  
+- Can set a gradient as background (like the paid thing on discord)
+- Add some colors in `/home`
 
 As said, ~~I~~ *(Cloudflare)* hosts a database which is just a big list of banned users and words.  
 
@@ -42,6 +43,7 @@ Done !
 - [ ] Add authentification with rugplay user token
 - [ ] Custom user profile banner
 - [ ] Add custom banner for 1st, 2nd, 3rd in market overview
+- [ ] Custom theme for rugplay
 
 You are free to contribute to the project.
 ## Contact 
