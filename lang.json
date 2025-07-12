@@ -23,6 +23,7 @@
       "error": "Erreur : "
     },
     "content": {
+      "rewardClaim": "Réclamer",
       "usernameTooLong": "Nom d'utilisateur trop long",
       "userBanned": "Utilisateur banni",
       "bannedWords": "Mot(s) bannis",
@@ -31,6 +32,28 @@
       "consoleTest": "test",
       "consoleAddedDirect": "[👀] Ajout direct détecté :",
       "consoleObservationActivated": "✅ Observation activée sur :"
+    },
+    "tooltip": {
+      "tomorrowAt": "Demain à ",
+      "dayStreakTooltip": "Série de jour",
+      "totalMoney": "Total argent",
+      "nextRewardAmount": "Montant prochaine récompense"
+    },
+    "abreviated": {
+      "k":"K",
+      "m":"M",
+      "b":"Md",
+      "t":"T"
+    },
+    "home": {
+      "title": "",
+      "subtitle": "Voici l'aperçu du marché pour aujourd'hui.",
+      "marketOverview": "Aperçu du marché",
+      "name": "Nom",
+      "price": "Prix",
+      "change24": "Mouvement 24h",
+      "marketCap": "Capitalisation",
+      "volume24h": "Volume 24h"
     }
   },
   "en": {
@@ -57,6 +80,7 @@
       "error": "Error: "
     },
     "content": {
+      "rewardClaim": "Claim",
       "usernameTooLong": "Username too long",
       "userBanned": "User banned",
       "bannedWords": "Banned word(s)",
@@ -65,6 +89,27 @@
       "consoleTest": "test",
       "consoleAddedDirect": "[👀] Direct addition detected:",
       "consoleObservationActivated": "✅ Observation activated on:"
+    },
+    "tooltip": {
+      "tomorrowAt": "Tomorrow at ",
+      "dayStreakTooltip": "Day Streak",
+      "totalMoney": "Total Money",
+      "nextRewardAmount": "Next Reward Amount"
+    },
+    "abreviated": {
+      "k":"K",
+      "m":"M",
+      "b":"B",
+      "t":"T"
+    },
+    "home": {
+      "subtitle": "Here's the market overview for today.",
+      "marketOverview": "Market Overview",
+      "name": "Name",
+      "price": "Price",
+      "change24": "24h Change",
+      "marketCap": "Market Cap",
+      "volume24h": "Volume 24h"
     }
   },
   "pt-BR": {
@@ -91,6 +136,7 @@
       "error": "Erro: "
     },
     "content": {
+      "rewardClaim": "Alegar",
       "usernameTooLong": "Nome de usuário muito longo",
       "userBanned": "Usuário banido",
       "bannedWords": "Palavra(s) banida(s)",
@@ -99,6 +145,27 @@
       "consoleTest": "teste",
       "consoleAddedDirect": "[👀] Adição direta detectada:",
       "consoleObservationActivated": "✅ Observação ativada em:"
+    },
+    "tooltip": {
+      "tomorrowAt": "Amanhã às ",
+      "dayStreakTooltip": "Série de dias",
+      "totalMoney": "Dinheiro total",
+      "nextRewardAmount": "Valor da próxima recompensa"
+    },
+    "abreviated": {
+      "k":"mil",
+      "m":"mi",
+      "b":"bi",
+      "t":"tri"
+    },
+    "home": {
+      "subtitle": "Aqui está a visão geral do mercado para hoje.",
+      "marketOverview": "Visão Geral do Mercado",
+      "name": "Nome",
+      "price": "Preço",
+      "change24": "Variação 24h",
+      "marketCap": "Capitalização de Mercado",
+      "volume24h": "Volume 24h"
     }
   },
   "ja": {
@@ -125,6 +192,7 @@
       "error": "エラー: "
     },
     "content": {
+      "rewardClaim": "請求",
       "usernameTooLong": "ユーザー名が長すぎます",
       "userBanned": "ユーザーが禁止されています",
       "bannedWords": "禁止ワード",
@@ -133,6 +201,26 @@
       "consoleTest": "テスト",
       "consoleAddedDirect": "[👀] 直接追加が検出されました：",
       "consoleObservationActivated": "✅ 観察が有効になりました："
+    },
+    "tooltip": {
+      "tomorrowAt": "あした ",
+      "dayStreakTooltip": "連続日数",
+      "totalMoney": "合計金額",
+      "nextRewardAmount": "次の報酬額"
+    },
+    "abreviated": {
+      "cho":"兆",
+      "oku":"億",
+      "man":"万"
+    },
+    "home": {
+      "subtitle": "本日の市場概要はこちらです。",
+      "marketOverview": "市場概要",
+      "name": "名前",
+      "price": "価格",
+      "change24": "24時間の変動",
+      "marketCap": "時価総額",
+      "volume24h": "24時間の取引量"
     }
   },
   "ja-Kana": {
@@ -159,6 +247,7 @@
       "error": "エラー: "
     },
     "content": {
+      "rewardClaim": "せいきゅう",
       "usernameTooLong": "ユーザーめいがながすぎます",
       "userBanned": "ユーザーがきんしされています",
       "bannedWords": "きんしワード",
@@ -167,6 +256,26 @@
       "consoleTest": "テスト",
       "consoleAddedDirect": "[👀] ちょくせつついかがけんしゅつされました：",
       "consoleObservationActivated": "✅ かんさつがゆうこうになりました："
+    },
+    "tooltip": {
+      "tomorrowAt": "あした ",
+      "dayStreakTooltip": "れんぞくにっすう",
+      "totalMoney": "ごうけいきんがく",
+      "nextRewardAmount": "つぎのほうしゅうがく"
+    },
+    "abreviated": {
+      "cho":"チョ",
+      "oku":"オク",
+      "man":"マン"
+    },
+    "home": {
+      "subtitle": "ほんじつのしじょうがいようはこちらです。",
+      "marketOverview": "しじょうがいよう",
+      "name": "なまえ",
+      "price": "かかく",
+      "change24": "にじゅうよじかんのへんどう",
+      "marketCap": "じかそうがく",
+      "volume24h": "にじゅうよじかんのとりひきりょう"
     }
   }
 }
