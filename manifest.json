@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Rugplay Amélioré",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "description": "Améliore l'expérience globale sur rugplay.com ; Anti-pub, Anti-Nom gênants, Anti-Spamers et décoration live trades pour *TCZ et *KNT",
     "permissions": [
         "storage",
