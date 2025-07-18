@@ -40,10 +40,10 @@ Done !
 
 
 ## Roadmap
-- [ ] Add authentification with rugplay user token
+- [ ] Add authentification with rugplay user token for white list (in case of more than 100,000 requests per day)
 - [ ] Custom user profile banner
-- [ ] Add custom banner for 1st, 2nd, 3rd in market overview
-- [ ] Custom theme for rugplay
+- [x] Add custom banner for 1st, 2nd, 3rd in market overview
+- [x] Custom theme for rugplay
 
 You are free to contribute to the project.
 ## Contact 
