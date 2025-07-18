@@ -1,12 +1,19 @@
-const targetCssUrl = "https://rugplay.com/_app/immutable/assets/0.BQV8Pc2H.css"; // URL du CSS original
-
 chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
-    return {
-      redirectUrl: chrome.runtime.getURL("enhanced.css")
-    };
+    const url = details.url;
+
+    // Vérifie que l'URL finit par .css, ne contient pas "Toaster", et vient de rugplay.com
+    if (
+      url.endsWith(".css") &&
+      !url.includes("Toaster") &&
+      url.includes("rugplay.com")
+    ) {
+      return {
+        redirectUrl: chrome.runtime.getURL("enhanced.css")
+      };
+    }
   },
-  { urls: [targetCssUrl] },
+  { urls: ["*://rugplay.com/*/*.css"] },
   ["blocking"]
 );
 
@@ -56,7 +63,7 @@ async function getGradientFromStorage(sendResponse) {
     console.log("Get Gradient from Storage");
     let bgGradient = result.backgroundGradient;
     if (!bgGradient) {
-      bgGradient = "000000";
+      bgGradient = "#800080";
       chrome.storage.local.set({ backgroundGradient: bgGradient });
     }
     const gradientObj = getGradient(bgGradient,true);
@@ -114,5 +121,22 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return true;
   }
 });
+
+window.fetch("https://api.github.com/repos/CodeEzpro/rugplay_enhanced/releases/latest")
+  .then(response => response.json())
+  .then(data => {
+    const latestVersion = data.tag_name.replace("stable_v","");
+    console.log(latestVersion)
+    const currentVersion = chrome.runtime.getManifest().version;
+
+    if (latestVersion !== currentVersion) {
+      chrome.notifications.create({
+        type: "basic",
+        iconUrl: "logo.png",
+        title: "🔔 New update avaiable",
+        message: `Version ${latestVersion} is now avaiable on github.`,
+      });
+    }
+  });
 
 fetchAndSaveWords();
