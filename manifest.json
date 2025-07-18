@@ -9,7 +9,8 @@
         "https://rugplaytcz.ianjones2127.workers.dev/*",
         "<all_urls>",
         "webRequest", 
-        "webRequestBlocking"
+        "webRequestBlocking",
+        "notifications"
     ],
 
     "icons": {
